@@ -1,0 +1,99 @@
+body{
+	background-color: #3D3D5C;
+	padding:0;
+	margin:0;
+	color:#fff;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#main-container{
+	width:1000px;
+	margin:0 auto;
+}
+
+.tile{
+	width:450px;
+	height:180px;
+	margin:5px;
+	padding:10px 14px;
+	float: left;
+}
+
+#webapp{
+	background-color: #000;
+	background-image: url('poster.jpg');
+	background-size: cover;
+	height:180px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#webapp span{
+	font-size: 60px;
+	font-weight: bold;
+}
+
+#links{
+	width: 205px;
+	height: 180px;
+	background-color: #FF7F50;
+}
+
+#links ul{
+	padding-left:13px;
+	margin:0;
+}
+
+#links li{
+	padding:2px 0;
+}
+
+#links ul li a{
+	color:#fff;	
+}
+
+#lecture{
+	width:205px;
+	height:180px;
+	background-color:#F4A460;
+}
+
+#lecture .time{
+	margin-bottom: 50px;
+	margin-right: 10px;
+}
+
+#lecture .time span{
+	float: right;
+}
+
+#lecture .day span{
+	font-size: 60px;
+	font-weight: bold;
+}
+
+#assesment{
+	background-color: #13B2A3;
+}
+
+#assesment h1{
+	text-align: center;
+}
+
+#assesment-table{
+	width:100%;
+	margin:0 auto;
+	font-weight: normal;
+	border-collapse: collapse;
+}
+
+#assesment-table th{
+	border-bottom: 1px solid #fff;
+	text-align: left;
+}
+
+#form{
+	background-color: 	#F0FFFF;
+	color:#000;
+}

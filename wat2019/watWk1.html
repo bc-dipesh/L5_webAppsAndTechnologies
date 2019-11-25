@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Dipesh B.C.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="text/css" rel="stylesheet" href="watWk1.css" />
+    <title>HTML/CSS Recap exercise</title>
+</head>
+
+<body>
+    <div id="main-container">
+
+        <div class="tile" id="webapp">
+            <h2><span>W</span>eb <span>A</span>pplication <span>T</span>echnologies</h2>
+        </div>
+
+        <div class="tile" id="links">
+            <h2>Links</h2>
+            <ul>
+                <li><a href="http://chubkins.herokuapp.com/" target="_blank">Chubkins</a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank">Learn Web Dev</a></li>
+                <li><a href="https://www.w3schools.com/colors/colors_names.asp" target="_blank">Color Reference</a></li>
+            </ul>
+        </div>
+        <div class="tile" id="lecture">
+            <div class="time">
+                <p>WAT Lecture <br />
+                    <span><i>12:00- 13:00 LTB</i></span></p>
+            </div>
+            <div class="day">
+                <p>Every <span>WED</span></p>
+            </div>
+        </div>
+        <div class="tile" id="assesment">
+            <h1>WAT Assesment</h1>
+            <table id="assesment-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Weight</th>
+                        <th>Due</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Work in Progress</td>
+                        <td>20%</td>
+                        <td>See in VLE</td>
+                    </tr>
+                    <tr>
+                        <td>Portfolio</td>
+                        <td>50%</td>
+                        <td>See in VLE</td>
+                    </tr>
+                    <tr>
+                        <td>Phase Exam</td>
+                        <td>30%</td>
+                        <td>See in VLE</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="tile" id="form">
+            <form>
+                <h1>Search for Property</h1>
+                <div>
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" placeholder="eg.this or that">
+                </div>
+                <div>
+                    <label for="category">Category:</label>
+                    <select name="cat" id="category">
+                        <option value="flat">Flat</option>
+                        <option value="sqaure">Square</option>
+                    </select>
+                    <label for="beds">Beds:</label>
+                    <input type="number" id="beds" placeholder="4" style="width:60px;">
+                </div>
+                <div>
+                    <input type="radio" name="property" value="Price" checked>Price
+                    <input type="radio" name="property" value="Beds">Beds
+                    <input type="radio" name="property" value="Alpha">Alpha
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
