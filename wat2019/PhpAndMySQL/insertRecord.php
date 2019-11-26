@@ -12,7 +12,10 @@ if (isset($_POST['submitForm'])) {
 }
 //(b)Construct INSERT query using variables holding data gathered
 //Temporarily echo $query for debugging purposes
-$query="INSERT INTO Customer (FirstName, LastName, Email, Password, Gender, Age) VALUES ('$fname', '$sname', '$email', '$passwd', '$gender', '$age')";
+$query="INSERT INTO `customer`(`CustomerID`, `FirstName`, `LastName`, `Email`, `Password`, `Gender`, `Age`) VALUES ('$fname', '$sname', '$email', '$passwd', '$gender', '$age')";
+//print_r($query);
+echo $query;
+exit();
 //run $query
 mysqli_query($connection, $query);
 ?>
