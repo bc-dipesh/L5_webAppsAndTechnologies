@@ -14,7 +14,7 @@
         <label for="passwd">Password: </label>
         <input type="password" name="txtPass" /><br />
         <input type="submit" value="Submit" name="loginSubmit" />
-        <input type="reset" value="Clear" />
+        <input type="reset" value="Clear" name="btn_clear" />
     </fieldset>
 </form>
 
@@ -29,7 +29,7 @@
         <label for="checkbox">Click to Confirm: </label>
         <input type="checkbox" name="chkbox_confirm" value="agree"><br />
         <input type="submit" value="Submit" name="btn_submit" />
-        <input type="reset" value="Clear" />
+        <input type="reset" value="Clear" name="btn_clear" />
     </fieldset>
 </form>
 
@@ -46,7 +46,7 @@
                                                                             echo $_POST['in_taxRate'];
                                                                         } ?>" /></label>
         <input type='submit' value='submit' name='tx_submitBtn' />
-        <input type='reset' value='Clear' name='tx_clearBtn' /></br>
+        <input type='reset' value='Clear' name='btn_clear' /></br>
     </fieldset>
 
 </form>
@@ -65,10 +65,10 @@ if (isset($_POST['loginSubmit'])) {
     $email = $_POST['txtEmail'];
     $password = $_POST['txtPass'];
 
-    if (empty($email) || empty($password)) echo 'Email or password cannot be empty</br>';
+    if (empty($email) || empty($password)) echo '</br>Email or password cannot be empty</br>';
     else {
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) echo 'Please enter a valid email</br>';
-        else echo 'Email: ' . $email . ' Password: ' . $password . '</br>';
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) echo '</br>Please enter a valid email</br>';
+        else echo '</br>Email: ' . $email . ' Password: ' . $password . '</br>';
     }
 } else {
     // Do nothing
@@ -85,11 +85,11 @@ if (isset($_POST['btn_submit'])) {
     }
 
     if (empty($email)) {
-        echo 'Email cannot be empty</br>';
+        echo '</br>Email cannot be empty</br>';
     } else {
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) echo 'Please enter a valid email</br>';
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) echo '</br>Please enter a valid email</br>';
         else {
-            echo 'Email: ' . $email . '</br>';
+            echo '</br>Email: ' . $email . '</br>';
             echo 'Comments: ' . $comment . '</br>';
             echo 'Confirm: ' . $confirm . '</br>';
         }
@@ -101,13 +101,14 @@ if (isset($_POST['tx_submitBtn'])) {
     $after_tax_price = $_POST['in_afterTax'];
     $tax_rate = $_POST['in_taxRate'];
 
-    if (empty($after_tax_price) || empty($tax_rate)) echo 'All Fields Required</br>';
+    if (empty($after_tax_price) || empty($tax_rate)) echo '</br>All Fields Required</br>';
     else {
-        if (!filter_var($tax_rate, FILTER_VALIDATE_INT)) echo 'Please enter a whole number for tax rate</br>';
+        if (!filter_var($tax_rate, FILTER_VALIDATE_INT)) echo '</br>Please enter a whole number for tax rate</br>';
         else {
             $before_tax_price = (100 * $after_tax_price) / (100.0 + $tax_rate);
-            echo '<b>Price before tax = £' . number_format($before_tax_price, 2) . '</b></br>';
+            echo '<b></br>Price before tax = £' . number_format($before_tax_price, 2) . '</b></br>';
         }
     }
 }
-if(isset($_GET['cat'])) echo 'You clicked: ' . $_GET['cat'];
+
+if(isset($_GET['cat'])) echo '</br>You clicked: ' . $_GET['cat'];

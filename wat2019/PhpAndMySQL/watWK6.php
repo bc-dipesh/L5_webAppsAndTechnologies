@@ -26,8 +26,8 @@
                 <br /><br />
                 <label for="gender">Gender:</label>
                 <select name="Gender">
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
                 </select>
                 <br /><br />
                 <label for="age">Age:</label>
