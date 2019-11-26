@@ -20,42 +20,24 @@
     <fieldset>
         <legend>Pizza Selection</legend>
         <label>Size:</label>
-        <input id='small' type='radio' name='rbtn' value='Small' checked='<?php if (isset($_POST['rtbn'])) {
-                                                                                if ($_POST['rbtn'] == 'Small') echo 'checked';
-                                                                            } ?>'><label for='small'>small:</label>
-        <input id='medium' type='radio' name='rbtn' value='Medium' checked='<?php if (isset($_POST['rtbn'])) {
-                                                                                if ($_POST['rbtn'] == 'Medium') echo 'checked';
-                                                                            } ?>'><label for='medium'>medium</label>
-        <input id='large' type='radio' name='rbtn' value='Large' checked='<?php if (isset($_POST['rtbn'])) {
-                                                                                if ($_POST['rbtn'] == 'Large') echo 'checked';
-                                                                            } ?>'><label for='large'>large</label></br>
+
+        <input id='small' type='radio' name='rbtn' value='Small' <?php if (isset($_POST['rbtn']) && $_POST['rbtn'] == "Small") echo "checked"; ?>><label for='small'>small</label>
+        <input id='medium' type='radio' name='rbtn' value='Medium' <?php if (isset($_POST['rbtn']) && $_POST['rbtn'] == "Medium") echo "checked"; ?>><label for='medium'>medium</label>
+        <input id='large' type='radio' name='rbtn' value='Large' <?php if (isset($_POST['rbtn']) && $_POST['rbtn'] == "Large") echo "checked"; ?>><label for='large'>large</label></br>
         <label>Topping:
             <select name="topping">
-                <option name='prompt' value="Please select" selected='<?php if (isset($_POST['prompt'])) {
-                                                                            echo 'selected';
-                                                                        } ?>'>Please select</option>
-                <option name='pepperoni' value="Pepperoni" selected='<?php if (isset($_POST['pepperoni'])) {
-                                                                            echo 'selected';
-                                                                        } ?>'>Pepperoni</option>
-                <option name='mushrooms' value="Mushrooms" selected='<?php if (isset($_POST['mushrooms'])) {
-                                                                            echo 'selected';
-                                                                        } ?>'>Mushrooms</option>
-                <option name='onions' value="Onions" selected='<?php if (isset($_POST['onions'])) {
-                                                                    echo 'selected';
-                                                                } ?>'>Onions</option>
+                <option name='prompt' value="Please select" <?php if (isset($_POST['topping']) && $_POST['topping'] == "Please select") echo "selected='selected'"; ?>>Please select</option>
+                <option name='pepperoni' value="Pepperoni" <?php if (isset($_POST['topping']) && $_POST['topping'] == "Pepperoni") echo "selected='selected'"; ?>>Pepperoni</option>
+                <option name='mushrooms' value="Mushrooms" <?php if (isset($_POST['topping']) && $_POST['topping'] == "Mushrooms") echo "selected='selected'"; ?>>Mushrooms</option>
+                <option name='onions' value="Onions" <?php if (isset($_POST['topping']) && $_POST['topping'] == "Onions") echo "selected='selected'"; ?>>Onions</option>
             </select></label></br>
         <label>Extras:
-            <input id='Parmesan' name='chkbox[]' type='checkbox' value='Parmesan' checked='<?php if (isset($_POST['chkbox'])) {
-                                                                                                if ($_POST['chkbox'] == 'Parmesan') echo 'checked';
-                                                                                            } ?>'>
+
+            <input id='Parmesan' name='chkbox[]' type='checkbox' value='Parmesan' <?php if (isset($_POST['chkbox']) && in_array("Parmesan", $_POST['chkbox'])) echo 'checked'; ?>>
             <label for='Parmesan'>Parmesan</label>
-            <input id='Olivers' name='chkbox[]' type='checkbox' value='Olivers' checked='<?php if (isset($_POST['chkbox'])) {
-                                                                                                if ($_POST['chkbox'] == 'Olivers') echo 'checked';
-                                                                                            } ?>'>
+            <input id='Olivers' name='chkbox[]' type='checkbox' value='Olivers' <?php if (isset($_POST['chkbox']) && in_array("Olivers", $_POST['chkbox'])) echo 'checked'; ?>>
             <label for='Olivers'>Olivers</label>
-            <input id='Capers' name='chkbox[]' type='checkbox' value='Capers' checked='<?php if (isset($_POST['chkbox'])) {
-                                                                                            if ($_POST['chkbox'] == 'Capers') echo 'checked';
-                                                                                        } ?>'>
+            <input id='Capers' name='chkbox[]' type='checkbox' value='Capers' <?php if (isset($_POST['chkbox']) && in_array("Capers", $_POST['chkbox'])) echo 'checked'; ?>>
             <label for='Capers'>Capers</label>
         </label>
     </fieldset></br>
@@ -84,10 +66,10 @@ if (isset($_POST['btn_submit'])) {
             }
             // Print out the details
             echo '<h2>Thank you for your order:</h2>';
-            echo 'Customer ID: ' . $customer_id . '</br>';
-            echo 'Email: ' . $email . '</br>';
-            echo 'Your order: ' . $size . ' ' . $topping . '</br>';
-            echo 'Extra Toppings: ' . $extras . '</br>';
+            echo 'Customer ID: <b>' . $customer_id . '</b></br>';
+            echo 'Email: <b>' . $email . '</b></br>';
+            echo 'Your order: <b>' . $size . ' ' . $topping . '</b></br>';
+            echo 'Extra Toppings: <b>' . $extras . '</b></br>';
         }
     }
 }
