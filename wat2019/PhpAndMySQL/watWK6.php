@@ -15,7 +15,7 @@
                 <label for="firstName">First Name:</label>
                 <input id="firstName" type="text" name="FirstName">
                 <br /><br />
-                <label for="secondName">Second Name:</label>
+                <label for="secondName">Last Name:</label>
                 <input id="secondName" type="text" name="SecondName">
                 <br /><br />
                 <label for="email">Email:</label>

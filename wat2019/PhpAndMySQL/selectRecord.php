@@ -54,9 +54,9 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 
 //Display heading
-echo '<h2>Select ALL with "a" in frist name</h2>';
+echo '<h2>Select ALL with "a" in first name</h2>';
 //run query to select all records from customer table
-$query = "SELECT * FROM customer WHERE FirstName LIKE '%a%'";
+$query = "SELECT * FROM customer WHERE FirstName LIKE 'a%'";
 //store the result of the query in a variable called $result
 $result = mysqli_query($connection, $query);
 //Use a while loop to iterate through your $result array and display

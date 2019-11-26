@@ -15,7 +15,6 @@ if (isset($_POST['submitForm'])) {
 $query="INSERT INTO `customer`(`FirstName`, `LastName`, `Email`, `Password`, `Gender`, `Age`) VALUES ('$fname', '$sname', '$email', '$passwd', '$gender', '$age')";
 //print_r($query);
 //run $query
-print_r(mysqli_query($connection, $query));
+mysqli_query($connection, $query);
 echo $query;
 exit();
-?>
